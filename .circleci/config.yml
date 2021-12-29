@@ -8,6 +8,7 @@ jobs:
     steps:
       - checkout
       - run: python3 main.py
+      - run: python3 demo.py
   test:
     working_directory: ~/circleci-python
     docker:
@@ -15,6 +16,7 @@ jobs:
     steps:
       - checkout
       - run: python3 main-test.py
+      - run: python3 demo-test.py
 
 workflows:
   build_and_test:
